@@ -4,14 +4,6 @@ let $$ = (selector, container = document) => Array.from(container.querySelectorA
 let $ = (selector, container = document) => container.querySelector(selector);
 
 let backend = Backend.from("https://github.com/designftw/hw9-ayeshaali/tracker/data.json");
-globalThis.backend = backend;
-
-// Load data
-let storedData = JSON.parse(data.innerHTML);
-
-for (let entry of storedData) {
-	addEntry(entry);
-}
 
 export const dom = {
 	app: document.querySelector("#app"),
@@ -24,14 +16,13 @@ export const dom = {
 };
 
 dom.saveButton.addEventListener("click", event => {
+	dom.app.classList.add("saving");
 	let dataToSave = $$(".entry > form").map(form => {
-		console.log(form);
 		let data = new FormData(form);
-		console.log(data);
 		return Object.fromEntries(data.entries());
 	});
-
-	data.innerHTML = JSON.stringify(dataToSave, null, "\t");
+	backend.store(dataToSave);
+	dom.app.classList.remove("saving");
 });
 
 dom.loginButton.addEventListener("click", async e => {
@@ -46,7 +37,7 @@ backend.addEventListener("mv-login", e => {
 	let user = backend.user;
 	if (user) {
 		dom.app.classList.add("logged-in");
-		dom.userName.textContent = user.name;
+		dom.userName.textContent = user.name+"'s Restaurant Tracker";
 		dom.userAvatar.src = user.avatar;
 	}
 });
@@ -89,3 +80,16 @@ function setFormElement(name, value, container) {
 		}
 	}
 }
+
+dom.app.classList.add("loading");
+export const json = await backend.load();
+if (json) {
+	for (let entry of json) {
+		addEntry(entry);
+	}
+}
+else {
+	addEntry();
+}
+dom.app.classList.remove("loading");
+
