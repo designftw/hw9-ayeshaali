@@ -1,0 +1,185 @@
+/* your css here */
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url("https://fonts.googleapis.com/css?family=Nunito:light");
+@import url('https://fonts.googleapis.com/css?family=Notable|Raleway|Raleway:bold');
+
+html.translated-rtl * {
+    direction: rtl;
+}
+/* All Files */
+
+p {
+    line-height: 1.75;
+}
+ul {
+    line-height: 1.5;
+}
+
+body {
+    background-color: #123C69;
+    color: #EDC7B7;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-family: 'Notable', sans-serif;
+    letter-spacing: 3px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #AC3B61;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+header h1 {
+    padding-left: 20px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    align-items: center;
+    margin-right: 10px;
+}
+
+a {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    height: 25%;
+    padding: 5px 10px 5px 10px;
+    background-color: #EDC7B7;
+    color: #123C69;
+    border-radius: 4px;
+    overflow: visible;
+    height:auto;
+}
+
+a:hover {
+    background-color: #123C69 ;
+    color: #EDC7B7;
+}
+
+main {
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 8em; 
+}
+
+
+/*  Index  */
+#bio-pic img {
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    width: 50%;
+}
+
+#bio {
+    max-width: 80%;
+    margin: auto;
+    margin-top: 2%;
+    display: block;
+    /* width: 100%;  */
+    font-size: 1.1em;
+    text-align: center;
+    border: solid 2px #AC3B61;
+} 
+
+#bio-container {
+    width: 60%;
+}
+
+@media (max-width: 600px) {
+	#bio-pic img {
+        width: 70%;
+    }
+
+    nav {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* CV */
+li {
+    margin-bottom: 5px;
+}
+
+#CV {
+    max-width: 60%;
+}
+
+@media (max-width: 700px) {
+	#CV {
+        max-width: 100%;
+    }
+}
+
+/* Profile */
+#cards {
+    min-width: 5em;
+    max-width: 30em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.card {
+    background-color: #EDC7B7;
+    color: #123C69;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px #c89b88;
+}
+
+@media (max-width: 1300px) {
+	#cards {
+		grid-template-columns: 1fr;
+	}	
+}
+
+/* CONTACT */
+form {
+    max-width: 40em;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-row-gap: 10px;
+}
+
+form button {
+    padding: 1%;
+    background-color: #EDC7B7;
+    color: #123C69;
+}
+
+form button:hover {
+    background-color: #AC3B61;
+    color: #EDC7B7;
+}
+
+
+@media print {
+	header {
+		display: none;
+	}
+    main {
+        margin-top: 1em; 
+    }
+}
