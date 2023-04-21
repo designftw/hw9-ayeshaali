@@ -1,15 +1,9 @@
 [
 	{
-		"datetime": "2023-04-20",
-		"restaurant": "Guru the Caterer",
-		"order": "Shahi Paneer and Dal Makhni",
-		"rating": "2"
-	},
-	{
-		"datetime": "2023-04-19",
-		"restaurant": "Foodland",
-		"order": "Beef Tehari and Chicken Kebab",
-		"rating": "5"
+		"datetime": "2023-04-21",
+		"restaurant": "Andala",
+		"order": "Beef Samosas",
+		"rating": "3"
 	},
 	{
 		"datetime": "2023-04-18",
@@ -18,21 +12,15 @@
 		"rating": "5"
 	},
 	{
-		"datetime": "2023-04-21",
-		"restaurant": "Andala",
-		"order": "Beef Samosas",
-		"rating": "3"
+		"datetime": "2023-04-19",
+		"restaurant": "Foodland",
+		"order": "Beef Tehari and Chicken Kebab",
+		"rating": "5"
 	},
 	{
-		"datetime": "",
-		"restaurant": "",
-		"order": "",
-		"rating": "1"
-	},
-	{
-		"datetime": "",
-		"restaurant": "",
-		"order": "",
-		"rating": "1"
+		"datetime": "2023-04-20",
+		"restaurant": "Guru the Caterer",
+		"order": "Shahi Paneer and Dal Makhni",
+		"rating": "2"
 	}
 ]
