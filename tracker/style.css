@@ -28,6 +28,10 @@ label {
     align-items: normal;
 }
 
+#app:not(.logged-in) #buttons {
+    padding-left: 0px;
+}
+
 #buttons > button:first-child {
     margin-bottom: 10px;
 }
@@ -52,4 +56,10 @@ label {
 #app:not(.loading) .show-on-loading,
 #app:not(.saving) .show-on-saving {
 	display: none;
+}
+
+@media (max-width: 1000px) {
+	label {
+		display: block;
+	}	
 }

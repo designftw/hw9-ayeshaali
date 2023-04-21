@@ -60,10 +60,15 @@ function addEntry(data) {
 	for (let prop in data) {
 		setFormElement(prop, data[prop], entry);
 	}
-
 	// Add new entry after "Add entry" button
 	add_entry_button.after(entry);
+	entry = add_entry_button.nextElementSibling
 }
+
+function deleteRow(el) {
+	el.parentElement.remove();
+} 
+window.deleteRow= deleteRow;
 
 function setFormElement(name, value, container) {
 	let elements = $$(`[name="${name}"]`, container);
