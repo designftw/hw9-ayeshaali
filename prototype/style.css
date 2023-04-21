@@ -1,0 +1,12 @@
+body {
+    max-width: 100%;
+}
+
+video {
+    max-height: 500px;
+}
+
+#videos {
+    display: flex;
+    flex-direction: row;
+}
