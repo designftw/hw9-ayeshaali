@@ -6,24 +6,86 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Tracker</title>
 	<script src="index.js" type="module"></script>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-	<button id="save_button">Save</button>
+<header id="app">
+	<div class="backend-controls">
+		<div id="user_info">
+			<img src="" alt="" id="user_avatar">
+			<span id="user_name"></span>
+		</div>
+		<button id="login_button">Log in</button>
+		<button id="logout_button">Log out</button>
+		<button id="save_button">Save</button>
+		<img src="img/loader.svg" alt="" class="loader show-on-saving">
+	</div>
 </header>
 
-<template id="entry_template">
-	<article class="entry">
-		<form>
-			<label>Date & Time: <input type="datetime-local" name="datetime"></label>
-			<label>Notes: <textarea name="notes"></textarea></label>
-		</form>
-	</article>
-</template>
+<!-- <article class="entry">
+	<form>
+		<label>Date: <input type="date" name="datetime"></label>
+		<label>Restaurant: <input name="restaurant"></input></label>
+		<label>Location: <input name="address"></input></label>
+		<label>Rating: 
+			<select name="rating">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+		</label>
+	</form>
+</article> -->
 
 <main>
 	<button id="add_entry_button">Add entry</button>
+	<template id="entry_template">
+	<article class="entry">
+		<form>
+			<label>Date: <input type="date" name="datetime"></label>
+			<label>Restaurant: <input name="restaurant"></input></label>
+			<label>Order: <input name="order"></input></label>
+			<label>Rating: 
+				<select name="rating">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</label>
+		</form>
+	</article>
+	</template>
+	<!-- <table>
+		<tr id="first_row">
+		  <th>Date</th>
+		  <th>Restaurant</th>
+		  <th>Location</th>
+		  <th>Rating</th>
+		</tr>
+		<template id="entry_template">
+			<tr class="entry">
+				<form>
+					<label><input type="date" name="datetime"></label>
+					<label></label><input name="restaurant"></input></label>
+					<label><input name="address"></input></label>
+					<label>
+						<select name="rating">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+					</label>
+				</form>
+			</tr>
+		</template>
+	</table> -->
 </main>
 
 <details>
